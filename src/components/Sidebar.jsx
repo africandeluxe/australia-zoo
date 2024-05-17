@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Sidebar = ({ animals, activeAnimal, setActiveAnimal }) => {
+const Sidebar = ({ animals, setActiveAnimal }) => {
   return (
     <aside>
       <ul>
         {animals.map(animal => (
-          <li key={animal.name} onClick={() => setActiveAnimal(animal)}>
-            {animal.name}
+          <li key={animal.name}>
+            <Link to={`/animal/${animal.name.toLowerCase()}`} onClick={() => setActiveAnimal(animal)}>
+              {animal.name}
+            </Link>
           </li>
         ))}
       </ul>
