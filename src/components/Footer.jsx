@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2024 Miski Manzizila - Australia Zoo</p>
+      <p>© 2024 Australia Zoo. All rights reserved.</p>
     </footer>
   );
 };

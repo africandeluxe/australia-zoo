@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import AnimalSummary from '../components/AnimalSummary';
 import animals from '../data/animals';
-import '../styles.module.css';
+import '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/Styles.module.css'
 
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
