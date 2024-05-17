@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import MammalsPage from './pages/MammalsPage';
 import BirdsPage from './pages/BirdsPage';
 import ReptilesPage from './pages/ReptilesPage';
+import AnimalDetailPage from './pages/AnimalDetailPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/mammals" element={<MammalsPage />} />
         <Route path="/birds" element={<BirdsPage />} />
         <Route path="/reptiles" element={<ReptilesPage />} />
+        <Route path="/animal/:name" element={<AnimalDetailPage />} />
       </Routes>
       <Footer />
     </Router>

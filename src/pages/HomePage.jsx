@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
-import AnimalCard from '../components/AnimalCard';
+import AnimalSummary from '../components/AnimalSummary';
 import animals from '../data/animals';
-import '../styles/Global.module.css';
+import '../styles.module.css';
 
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
-  console.log(animals);
-  console.log(activeAnimal);
+
+  const handleAnimalClick = (animal) => {
+    setActiveAnimal(prevActiveAnimal => {
+      if (prevActiveAnimal && prevActiveAnimal.name === animal.name) {
+        return null;
+      }
+      return animal;
+    });
+  };
 
   return (
     <div className="container">
-      <Sidebar animals={animals} setActiveAnimal={setActiveAnimal} />
+      <Sidebar animals={animals} setActiveAnimal={handleAnimalClick} />
       <main>
         {activeAnimal ? (
-          <AnimalCard animal={activeAnimal} />
+          <AnimalSummary animal={activeAnimal} />
         ) : (
           <p>Welcome to the Australia Zoo!</p>
         )}
