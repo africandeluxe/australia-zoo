@@ -6,8 +6,8 @@ const Sidebar = ({ animals, setActiveAnimal }) => {
     <aside>
       <ul>
         {animals.map(animal => (
-          <li key={animal.name}>
-            <Link to={`/animal/${animal.name.toLowerCase()}`} onClick={() => setActiveAnimal(animal)}>
+          <li key={animal.name} onClick={() => setActiveAnimal(animal)}>
+            <Link to={`/animal/${animal.name.toLowerCase()}`}>
               {animal.name}
             </Link>
           </li>

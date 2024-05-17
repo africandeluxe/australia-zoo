@@ -8,7 +8,7 @@ const animals = [
     length: '76cm',
     weight: '10kg',
     found: 'Throughout Australia',
-    image: '/public/animals/echidna.jpg'
+    image: '/images/echidna.jpg'
   },
   {
     name: 'Frill-necked Lizard',
@@ -19,7 +19,7 @@ const animals = [
     length: '90cm',
     weight: '1 kg',
     found: 'Northern Australia',
-    image: '/public/animals/frill-necked-lizard.jpg'
+    image: '/images/frill-necked-lizard.jpg'
   },
   {
     name: 'Cassowary',
@@ -30,7 +30,7 @@ const animals = [
     length: '1.7m',
     weight: '44kg',
     found: 'Queensland',
-    image: '/public/animals/cassowary.jpg'
+    image: '/images/cassowary.jpg'
   },
   {
     name: 'Tasmanian Devil',
@@ -41,7 +41,7 @@ const animals = [
     length: '70cm',
     weight: '10kg',
     found: 'Tasmania',
-    image: '/public/animals/tasmanian-devil.jpg'
+    image: '/images/tasmanian-devil.jpg'
   },
   {
     name: 'Hawksbill Turtle',
@@ -52,7 +52,7 @@ const animals = [
     length: '80cm (carapace)',
     weight: '50kg',
     found: 'Tropical coasts of Queensland, Northern Territory and Western Australia',
-    image: '/public/animals/hawksbill-turtle.jpg'
+    image: '/images/hawksbill-turtle.jpg'
   },
   {
     name: 'Kookaburra',
@@ -63,7 +63,7 @@ const animals = [
     length: '43cm',
     weight: '300g',
     found: 'Australia wide',
-    image: '/public/animals/kookaburra.jpg'
+    image: '/images/kookaburra.jpg'
   },
   {
     name: 'Quokka',
@@ -74,7 +74,7 @@ const animals = [
     length: '50cm',
     weight: '3kg',
     found: 'Only found on Rottnest Island and a few places on mainland Western Australia',
-    image: '/public/animals/quokka.jpg'
+    image: '/images/quokka.jpg'
   },
   {
     name: 'Perentie',
@@ -85,7 +85,7 @@ const animals = [
     length: '2.5m',
     weight: '20kg',
     found: 'Deserts',
-    image: '/public/animals/perentie.jpg'
+    image: '/images/perentie.jpg'
   },
   {
     name: 'Yellow Tailed Black Cockatoo',
@@ -96,7 +96,7 @@ const animals = [
     length: '65cm',
     weight: '900g',
     found: 'SE Australia',
-    image: '/public/animals/yellow-tailed-black-cockatoo.jpg'
+    image: '/images/yellow-tailed-black-cockatoo.jpg'
   }
 ];
 
