@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const AnimalCard = ({ animal }) => {
   return (
-    <div>
+    <div className="animal-card">
       <img src={animal.image} alt={animal.name} />
       <h2>{animal.name}</h2>
       <p>{animal.description.substring(0, 200)}...</p>
