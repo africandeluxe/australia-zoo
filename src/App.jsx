@@ -6,18 +6,16 @@ import HomePage from './pages/HomePage';
 import MammalsPage from './pages/MammalsPage';
 import BirdsPage from './pages/BirdsPage';
 import ReptilesPage from './pages/ReptilesPage';
-import AnimalDetailPage from './pages/AnimalDetailPage';
 
 const App = () => {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/mammals" component={MammalsPage} />
-        <Route path="/birds" component={BirdsPage} />
-        <Route path="/reptiles" component={ReptilesPage} />
-        <Route path="/animal/:name" component={AnimalDetailPage} />
+      <Route path="/" element={<HomePage />} />
+        <Route path="/mammals" element={<MammalsPage />} />
+        <Route path="/birds" element={<BirdsPage />} />
+        <Route path="/reptiles" element={<ReptilesPage />} />
       </Routes>
       <Footer />
     </Router>

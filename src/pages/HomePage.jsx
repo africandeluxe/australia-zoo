@@ -7,6 +7,7 @@ import '../styles/Global.module.css';
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
   console.log(animals);
+  console.log(activeAnimal);
 
   return (
     <div className="container">

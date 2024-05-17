@@ -13,7 +13,7 @@ const animals = [
   {
     name: 'Frill-necked Lizard',
     lifespan: '20 years',
-    group: 'Reptile',
+    group: 'Reptiles',
     food: 'Small insects and spiders',
     description: 'When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth...',
     length: '90cm',
@@ -24,7 +24,7 @@ const animals = [
   {
     name: 'Cassowary',
     lifespan: '20 years',
-    group: 'Bird',
+    group: 'Birds',
     food: 'Plants matter like fruit, insects and small animals like mice and lizards',
     description: 'It’s not hard to imagine that cassowaries are descended from dinosaur ancestors...',
     length: '1.7m',
@@ -46,7 +46,7 @@ const animals = [
   {
     name: 'Hawksbill Turtle',
     lifespan: '50 years',
-    group: 'Reptile',
+    group: 'Reptiles',
     food: 'other animals (sponges & jellyfish), sea plants',
     description: 'The Hawksbill Sea Turtle gets its common name from the distinctive mouth, which resembles a bird’s beak...',
     length: '80cm (carapace)',
@@ -57,7 +57,7 @@ const animals = [
   {
     name: 'Kookaburra',
     lifespan: '20 years',
-    group: 'Bird',
+    group: 'Birds',
     food: 'Insects and smalll animals including snakes, frogs and lizards',
     description: 'Native to the eucalyptus forests of eastern Australia, the laughing kookaburra is the largest member of the Kingfisher family...',
     length: '43cm',
@@ -90,7 +90,7 @@ const animals = [
   {
     name: 'Yellow Tailed Black Cockatoo',
     lifespan: '41 years',
-    group: 'Bird',
+    group: 'Birds',
     food: 'Fruit, seeds and other plant material',
     description: 'It has a short crest on the top of its head. Its plumage is mostly brownish black and it has prominent yellow cheek patches...',
     length: '65cm',

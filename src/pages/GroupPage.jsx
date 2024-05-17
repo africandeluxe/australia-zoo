@@ -1,4 +1,3 @@
-// src/pages/GroupPage.js
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import AnimalDetail from '../components/AnimalDetail';
@@ -9,7 +8,7 @@ const GroupPage = ({ group }) => {
   const [activeAnimal, setActiveAnimal] = useState(null);
 
   return (
-    <div>
+    <div className="container">
       <Sidebar animals={filteredAnimals} setActiveAnimal={setActiveAnimal} />
       <main>
         {activeAnimal ? (
