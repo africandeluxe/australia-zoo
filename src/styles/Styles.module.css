@@ -10,6 +10,17 @@ header {
   text-align: center;
 }
 
+/*.logoContainer {
+  display: flex;
+  align-items: center;
+}*/
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
 nav ul {
   display: flex;
   list-style-type: none;
@@ -27,6 +38,36 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+.animalLink {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.animalLink:hover {
+  color: #FF4500;
+}
+
+.readMoreButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.readMoreButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 
 footer {
@@ -48,6 +89,13 @@ aside {
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease
+}
+
+aside ul li:hover {
+  color: #FFD700;
 }
 
 main {
