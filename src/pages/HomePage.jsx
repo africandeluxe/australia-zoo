@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import AnimalSummary from '../components/AnimalSummary';
 import animals from '../data/animals';
-import '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/styles/Styles.module.css'
+import styles from '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/styles/Styles.module.css'
 
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
@@ -17,15 +17,17 @@ const HomePage = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
+      <div className={styles.sidebar}>
       <Sidebar animals={animals} setActiveAnimal={handleAnimalClick} />
-      <main>
+      </div>
+      <div className={styles.mainContent}>
         {activeAnimal ? (
           <AnimalSummary animal={activeAnimal} />
         ) : (
           <p>Welcome to the Australia Zoo!</p>
         )}
-      </main>
+      </div>
     </div>
   );
 };

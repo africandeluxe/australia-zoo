@@ -3,23 +3,29 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import MammalsPage from './pages/MammalsPage';
-import BirdsPage from './pages/BirdsPage';
-import ReptilesPage from './pages/ReptilesPage';
-import AnimalDetailPage from './pages/AnimalDetailPage';
-
+import GroupPage from './pages/GroupPage';
+import AnimalDetail from './components/AnimalDetail';
+import animals from './data/animals';
+import styles from '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/styles/Styles.module.css'
 const App = () => {
   return (
     <Router>
+      <div className={styles.app}>
       <Header />
+      <div className={styles.container}>
       <Routes>
-      <Route path="/" element={<HomePage />} />
-        <Route path="/mammals" element={<MammalsPage />} />
-        <Route path="/birds" element={<BirdsPage />} />
-        <Route path="/reptiles" element={<ReptilesPage />} />
-        <Route path="/animal/:name" element={<AnimalDetailPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/mammals" element={<GroupPage group="mammals" />} />
+        <Route path="/birds" element={<GroupPage group="birds" />} />
+        <Route path="/reptiles" element={<GroupPage group="reptiles" />} />
+        <Route 
+          path="/animal/:name" 
+          element={<AnimalDetail animal={animals.find(animal => animal.name.toLowerCase() === window.location.pathname.split("/")[2])} />} 
+        />
       </Routes>
+      </div>
       <Footer />
+      </div>
     </Router>
   );
 };

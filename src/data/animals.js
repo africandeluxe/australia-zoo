@@ -79,7 +79,7 @@ const animals = [
   {
     name: 'Perentie',
     lifespan: '20 years',
-    group: 'Reptile',
+    group: 'Reptiles',
     food: 'Carnivore, they eat animals like kangaroos, rabbits, lizards and birds',
     description: 'The perentie (Varanus giganteus) is the largest monitor lizard or goanna native to Australia...',
     length: '2.5m',

@@ -4,7 +4,7 @@ import styles from '../styles/Styles.module.css';
 
 const AnimalSummary = ({ animal }) => {
   return (
-    <div className="animal-summary">
+    <div className={styles.animalSummary}>
       <img src={animal.image} alt={animal.name} />
       <h2>{animal.name}</h2>
       <p>{animal.description.substring(0, 200)}...</p>

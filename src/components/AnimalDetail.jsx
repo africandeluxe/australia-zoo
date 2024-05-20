@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AnimalDetail = ({ animal }) => {
+  
   return (
     <div>
       <img src={animal.image} alt={animal.name} />
