@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import AnimalSummary from '../components/AnimalSummary';
 import animals from '../data/animals';
-import styles from '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/styles/Styles.module.css'
+import styles from '../Styles.module.css';
 import AnimalDetailPage from './AnimalDetailPage';
 
 const HomePage = () => {

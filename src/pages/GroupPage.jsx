@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import AnimalDetail from '../components/AnimalDetail';
 import animals from '../data/animals';
-import styles from '../styles/Styles.module.css'
+import styles from '../Styles.module.css';
 
 const GroupPage = ({ group }) => {
   const filteredAnimals = animals.filter(animal => animal.group.toLowerCase() === group);

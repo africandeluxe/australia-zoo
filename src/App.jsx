@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import GroupPage from './pages/GroupPage';
 import AnimalDetail from './components/AnimalDetail';
 import animals from './data/animals';
-import styles from '../src/styles/Styles.module.css'
+import styles from './Styles.module.css'
 
 const App = () => {
   return (

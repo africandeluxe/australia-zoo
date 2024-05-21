@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../styles/Styles.module.css';
+import styles from '../Styles.module.css';
 
 const AnimalSummary = ({ animal, handleClick }) => {
   return (
