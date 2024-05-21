@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AnimalDetail = ({ animal }) => {
-  
+const AnimalDetail = ({ animal, handleClick }) => {
+
   return (
     <div>
       <img src={animal.image} alt={animal.name} />

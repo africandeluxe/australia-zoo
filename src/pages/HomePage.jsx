@@ -3,9 +3,12 @@ import Sidebar from '../components/Sidebar';
 import AnimalSummary from '../components/AnimalSummary';
 import animals from '../data/animals';
 import styles from '/Users/miski/frontend-programing/JSframeworks/australia-zoo/src/styles/Styles.module.css'
+import AnimalDetailPage from './AnimalDetailPage';
 
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
+
+const [showAnimalDetails, setShowAnimalDetails] = useState(null);
 
   const handleAnimalClick = (animal) => {
     setActiveAnimal(prevActiveAnimal => {
@@ -15,18 +18,21 @@ const HomePage = () => {
       return animal;
     });
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
       <Sidebar animals={animals} setActiveAnimal={handleAnimalClick} />
       </div>
       <div className={styles.mainContent}>
-        {activeAnimal ? (
-          <AnimalSummary animal={activeAnimal} />
+        {!showAnimalDetails &&
+        activeAnimal ? (
+          <AnimalSummary animal={activeAnimal} handleClick={setShowAnimalDetails}/>
         ) : (
           <p>Welcome to the Australia Zoo!</p>
-        )}
+        )
+      }
+      {showAnimalDetails && 
+      <AnimalDetailPage animal={showAnimalDetails} handleClick={setShowAnimalDetails} unsetAnimal={setActiveAnimal} /> }
       </div>
     </div>
   );

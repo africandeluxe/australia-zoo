@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Styles.module.css';
 
-const AnimalSummary = ({ animal }) => {
+const AnimalSummary = ({ animal, handleClick }) => {
   return (
     <div className={styles.animalSummary}>
       <img src={animal.image} alt={animal.name} />
@@ -10,7 +10,7 @@ const AnimalSummary = ({ animal }) => {
       <p>{animal.description.substring(0, 200)}...</p>
       <p>Diet: {animal.food}</p>
       <p>Group: <Link to={`/${animal.group.toLowerCase()}`} className={styles.animalLink}>{animal.group}</Link></p>
-      <Link to={`/animal/${animal.name.toLowerCase()}`} className={styles.readMoreButton}>Read More</Link>
+      <button onClick={() => handleClick(animal)} className={styles.readMoreButton}>Read More</button>
     </div>
   );
 };
