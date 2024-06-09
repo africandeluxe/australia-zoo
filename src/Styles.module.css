@@ -12,6 +12,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -25,6 +31,17 @@ header {
   text-align: left;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
@@ -169,12 +186,32 @@ aside ul li:hover {
     height: auto;
   }
 
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    z-index: 1;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
   nav ul {
     flex-direction: column;
+    width: 100%;
   }
 
   nav ul li {
-    margin: 0.5rem 0;
+    margin: 10px 0;
   }
 
   header {
@@ -217,5 +254,14 @@ aside ul li:hover {
 
   .readMoreButton {
     padding: 5px 10px;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav ul li {
+    margin: 0.25rem 0;
   }
 }
