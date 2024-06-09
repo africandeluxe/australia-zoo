@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100%;
+  overflow: auto;
 }
 
 header {
@@ -100,7 +101,7 @@ aside ul li:hover {
   align-items: flex-start;
   padding: 20px;
   width: 100%;
-  min-height: calc(100vh - 64px);
+  height: auto;
   box-sizing: border-box;
 }
 
