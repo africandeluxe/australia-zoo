@@ -108,6 +108,7 @@ aside ul li:hover {
   width: 100%;
   height: auto;
   box-sizing: border-box;
+  min-height: calc(100vh - 34px);
 }
 
 .animal-card {
