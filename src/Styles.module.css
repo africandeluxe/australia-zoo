@@ -2,7 +2,6 @@ html, body {
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100%;
-  overflow-x: hidden;
 }
 
 header {
@@ -13,6 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 2;
 }
 
 .logoContainer {
@@ -44,50 +44,24 @@ header {
   align-items: center;
 }
 
-nav ul {
+.nav ul {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
+.nav ul li {
   margin: 0 16px;
 }
 
-nav ul li a {
+.nav ul li a {
   color: white;
   text-decoration: none;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
   color: #FFD700;
-}
-
-.animalLink {
-  color: #4CAF50;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.animalLink:hover {
-  color: #FF4500;
-}
-
-.readMoreButton {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.readMoreButton:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
 }
 
 footer {
@@ -95,8 +69,9 @@ footer {
   color: white;
   text-align: center;
   width: 100%;
-  bottom: 0;
-  position: fixed;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 aside {
@@ -125,7 +100,8 @@ aside ul li:hover {
   align-items: flex-start;
   padding: 20px;
   width: 100%;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
 }
 
 .animal-card {
@@ -143,7 +119,6 @@ aside ul li:hover {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 1rem;
-  height: 100%;
 }
 
 .animalSummary img {
@@ -154,11 +129,10 @@ aside ul li:hover {
 .animalDetail {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .animalDetail img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -180,12 +154,24 @@ aside ul li:hover {
   color: #FF4500;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
+.readMoreButton {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.readMoreButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -205,13 +191,26 @@ aside ul li:hover {
     display: flex;
   }
 
-  nav ul {
+  .nav ul {
     flex-direction: column;
     width: 100%;
   }
 
-  nav ul li {
+  .nav ul li {
     margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
   }
 
   header {
@@ -220,6 +219,15 @@ aside ul li:hover {
 }
 
 @media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav ul li {
+    margin: 0.25rem 0;
+  }
+
   .container {
     flex-direction: column;
     height: auto;
@@ -236,32 +244,11 @@ aside ul li:hover {
     margin-bottom: 20px;
   }
 
-  header, footer {
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 0.25rem 0;
-  }
-
   .animalSummary, .animalDetail {
     padding: 10px;
   }
 
   .readMoreButton {
     padding: 5px 10px;
-  }
-
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav ul li {
-    margin: 0.25rem 0;
   }
 }

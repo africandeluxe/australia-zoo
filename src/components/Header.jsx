@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from '../Styles.module.css';
 
@@ -12,9 +12,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-      <img src="images/zoo-logo.png" alt="Australia Zoo Logo" className={styles.logo} />
-      </div>
-      <div className={styles.title}>Australia Zoo
+        <img src="images/zoo-logo.png" alt="Australia Zoo Logo" className={styles.logo} />
+        <div className={styles.title}>Australia Zoo</div>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>
         &#9776;
