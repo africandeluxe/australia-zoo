@@ -7,8 +7,7 @@ import AnimalDetailPage from './AnimalDetailPage';
 
 const HomePage = () => {
   const [activeAnimal, setActiveAnimal] = useState(null);
-
-const [showAnimalDetails, setShowAnimalDetails] = useState(null);
+  const [showAnimalDetails, setShowAnimalDetails] = useState(null);
 
   const handleAnimalClick = (animal) => {
     setActiveAnimal(prevActiveAnimal => {
@@ -18,21 +17,20 @@ const [showAnimalDetails, setShowAnimalDetails] = useState(null);
       return animal;
     });
   };
+
   return (
     <div className={styles.container}>
-      <div className={styles.sidebar}>
-      <Sidebar animals={animals} setActiveAnimal={handleAnimalClick} />
-      </div>
+      <aside className={styles.sidebar}>
+        <Sidebar animals={animals} setActiveAnimal={handleAnimalClick} />
+      </aside>
       <div className={styles.mainContent}>
-        {!showAnimalDetails &&
-        activeAnimal ? (
-          <AnimalSummary animal={activeAnimal} handleClick={setShowAnimalDetails}/>
+        {!showAnimalDetails && activeAnimal ? (
+          <AnimalSummary animal={activeAnimal} handleClick={setShowAnimalDetails} />
         ) : (
           <p>Welcome to the Australia Zoo!</p>
-        )
-      }
-      {showAnimalDetails && 
-      <AnimalDetailPage animal={showAnimalDetails} handleClick={setShowAnimalDetails} unsetAnimal={setActiveAnimal} /> }
+        )}
+        {showAnimalDetails && 
+        <AnimalDetailPage animal={showAnimalDetails} handleClick={setShowAnimalDetails} unsetAnimal={setActiveAnimal} />}
       </div>
     </div>
   );

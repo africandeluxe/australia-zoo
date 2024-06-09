@@ -11,7 +11,7 @@ const GroupPage = ({ group }) => {
   return (
     <div className={styles.container}>
       <aside className={styles.sidebar}>
-      <Sidebar animals={filteredAnimals} setActiveAnimal={setActiveAnimal} />
+        <Sidebar animals={filteredAnimals} setActiveAnimal={setActiveAnimal} />
       </aside>
       <div className={styles.mainContent}>
         {activeAnimal ? (

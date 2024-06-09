@@ -14,11 +14,6 @@ header {
   align-items: center;
 }
 
-/*.logoContainer {
-  display: flex;
-  align-items: center;
-}*/
-
 .logo {
   width: 50px;
   height: auto;
@@ -36,7 +31,7 @@ nav ul {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 nav ul li {
@@ -90,16 +85,9 @@ footer {
 aside {
   background-color: #f4f4f4;
   padding: 1rem;
-  float: left;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
   color: black;
   text-decoration: none;
   transition: color 0.3s ease;
-  margin-right: 20px;
 }
 
 aside ul li:hover {
@@ -111,8 +99,7 @@ aside ul li:hover {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  width: 100%;
-  height: 100%;
+  flex: 1;
 }
 
 .container {
@@ -121,7 +108,7 @@ aside ul li:hover {
   align-items: flex-start;
   padding: 20px;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 64px);
 }
 
 .animal-card {
@@ -139,7 +126,7 @@ aside ul li:hover {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 1rem;
-  height:100%;
+  height: 100%;
 }
 
 .animalSummary img {
@@ -178,7 +165,8 @@ aside ul li:hover {
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
   }
 
   nav ul {
@@ -188,14 +176,46 @@ aside ul li:hover {
   nav ul li {
     margin: 0.5rem 0;
   }
+
+  header {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .mainContent {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  aside {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
   header, footer {
-    padding: 0.5rem;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
 
   nav ul li {
     margin: 0.25rem 0;
+  }
+
+  .animalSummary, .animalDetail {
+    padding: 10px;
+  }
+
+  .readMoreButton {
+    padding: 5px 10px;
   }
 }
