@@ -85,6 +85,7 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
+  box-sizing: border-box;
 }
 
 aside {
@@ -185,7 +186,6 @@ aside ul li:hover {
   transform: scale(1.05);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
