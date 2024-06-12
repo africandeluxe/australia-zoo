@@ -5,6 +5,13 @@ html, body {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 header {
@@ -182,6 +189,10 @@ aside ul li:hover {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+  }
+
+  footer {
+    padding: 10px;
   }
 
   .nav {
